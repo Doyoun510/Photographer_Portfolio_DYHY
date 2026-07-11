@@ -67,12 +67,17 @@ export default function Contact() {
               href={artist.instagram}
               target="_blank"
               rel="noreferrer"
-              className={`${pill} ${
+              className={`${pill} inline-flex items-center justify-center ${
                 isMain
                   ? "border-neutral-900 bg-neutral-900 text-white hover:bg-neutral-700"
                   : "border-neutral-300 text-neutral-700 hover:border-neutral-500"
               }`}
             >
+              {isMain && (
+                <span className="mr-2 rounded-full bg-white/20 px-2 py-0.5 text-[11px] tracking-normal">
+                  대표
+                </span>
+              )}
               {artist.name} · {handle(artist.instagram)} →
             </a>
           );
