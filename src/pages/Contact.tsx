@@ -59,10 +59,7 @@ export default function Contact() {
 
       {/* 메인 소통 창구 — 스튜디오 대표 인스타 DM */}
       <p className="mt-12 text-xs uppercase tracking-[0.2em] text-neutral-400">
-        메인 소통 창구
-      </p>
-      <p className="mt-2 text-sm text-neutral-600">
-        가장 빠른 연락은 스튜디오 인스타그램 DM으로 주세요
+        메인 작가 Instergram 문의
       </p>
       <a
         href={mainInsta}
@@ -97,7 +94,7 @@ export default function Contact() {
 
       {/* 카카오톡 · 이메일 (클릭 시 복사) */}
       <p className="mt-12 text-xs uppercase tracking-[0.2em] text-neutral-400">
-        또는 복사해서 연락
+        카카오톡, 이메일 연락 (클릭 시 복사)
       </p>
       <div className="mt-4 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
         <button
