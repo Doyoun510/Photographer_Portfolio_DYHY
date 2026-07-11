@@ -5,6 +5,16 @@ import type { Artist } from "../types";
 
 const artists = artistsData as Artist[];
 
+// URL 끝 슬래시 제거 후 비교 / 핸들(@아이디) 추출
+const normalize = (url: string) => url.replace(/\/+$/, "");
+const handle = (url: string) => "@" + normalize(url).split("/").pop();
+
+// 대표(스튜디오) 계정과 개별 작가 계정 분리
+const mainInsta = site.instagram;
+const otherArtists = artists.filter(
+  (a) => normalize(a.instagram) !== normalize(mainInsta)
+);
+
 export default function Contact() {
   // 복사된 항목의 key를 저장 (kakao / email)
   const [copied, setCopied] = useState<string | null>(null);
@@ -47,26 +57,46 @@ export default function Contact() {
       </h1>
       <p className="mt-6 text-neutral-500">{site.contactSub}</p>
 
-      {/* Instagram DM */}
+      {/* 메인 소통 창구 — 스튜디오 대표 인스타 DM */}
       <p className="mt-12 text-xs uppercase tracking-[0.2em] text-neutral-400">
-        Instagram DM
+        메인 소통 창구
       </p>
-      <div className="mt-4 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-        {artists.map((artist) => (
-          <a
-            key={artist.id}
-            href={artist.instagram}
-            target="_blank"
-            rel="noreferrer"
-            className={`${pill} border-neutral-800 hover:bg-neutral-800 hover:text-white`}
-          >
-            {artist.name} · Instagram DM →
-          </a>
-        ))}
-      </div>
+      <p className="mt-2 text-sm text-neutral-600">
+        가장 빠른 연락은 스튜디오 인스타그램 DM으로 주세요
+      </p>
+      <a
+        href={mainInsta}
+        target="_blank"
+        rel="noreferrer"
+        className={`${pill} mt-5 border-neutral-900 bg-neutral-900 px-8 text-base text-white hover:bg-neutral-700`}
+      >
+        {handle(mainInsta)} 으로 DM 보내기 →
+      </a>
+
+      {/* 작가 개별 문의 */}
+      {otherArtists.length > 0 && (
+        <>
+          <p className="mt-12 text-xs uppercase tracking-[0.2em] text-neutral-400">
+            작가 개별 문의
+          </p>
+          <div className="mt-4 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+            {otherArtists.map((artist) => (
+              <a
+                key={artist.id}
+                href={artist.instagram}
+                target="_blank"
+                rel="noreferrer"
+                className={`${pill} border-neutral-300 text-neutral-700 hover:border-neutral-500`}
+              >
+                {artist.name} · {handle(artist.instagram)} →
+              </a>
+            ))}
+          </div>
+        </>
+      )}
 
       {/* 카카오톡 · 이메일 (클릭 시 복사) */}
-      <p className="mt-10 text-xs uppercase tracking-[0.2em] text-neutral-400">
+      <p className="mt-12 text-xs uppercase tracking-[0.2em] text-neutral-400">
         또는 복사해서 연락
       </p>
       <div className="mt-4 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
