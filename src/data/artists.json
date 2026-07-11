@@ -1,0 +1,28 @@
+[
+  {
+    "id": "a1",
+    "name": "김도윤",
+    "role": "Photographer — Portrait · Street",
+    "bio": "사람의 표정과 거리의 순간을 기록합니다. 자연광을 활용한 편안한 분위기의 인물 사진과 도시의 리듬을 담은 스트릿 사진을 주로 작업합니다.",
+    "career": [
+      "2024 개인전 〈빛의 기록〉",
+      "2023 그룹전 〈도시의 얼굴들〉 참여",
+      "브랜드 룩북 · 프로필 촬영 다수 진행"
+    ],
+    "instagram": "https://instagram.com/dyhy.dy",
+    "profileCloudinaryId": "dyhy/profile/a1"
+  },
+  {
+    "id": "a2",
+    "name": "박하영",
+    "role": "Photographer — Interior · Space",
+    "bio": "공간이 가진 온도와 결을 담습니다. 카페, 스튜디오, 주거 공간 등 빛과 구조가 어우러지는 인테리어 사진을 중심으로 작업합니다.",
+    "career": [
+      "2024 공간 사진집 〈머무는 자리〉 발간",
+      "2023 인테리어 매거진 화보 촬영",
+      "카페 · 쇼룸 공간 촬영 다수 진행"
+    ],
+    "instagram": "https://instagram.com/dyhy.hy",
+    "profileCloudinaryId": "dyhy/profile/a2"
+  }
+]

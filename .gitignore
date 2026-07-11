@@ -1,0 +1,7 @@
+node_modules
+dist
+.vercel
+*.local
+
+# 미디어/작업 파일 (레포에 넣지 않음)
+*.mp4

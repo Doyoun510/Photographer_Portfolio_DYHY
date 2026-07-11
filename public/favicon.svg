@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#ffffff"/>
+  <g transform="translate(10.5 17.5) scale(0.19)" fill="#171717" font-family="Pretendard, -apple-system, 'Segoe UI', sans-serif" font-weight="600">
+    <text x="36" y="71" font-size="100" text-anchor="middle">D</text>
+    <text x="36" y="152" font-size="100" text-anchor="middle">H</text>
+    <text x="154" y="152" font-size="214" text-anchor="middle">Y</text>
+  </g>
+</svg>
