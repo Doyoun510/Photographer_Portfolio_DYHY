@@ -32,14 +32,34 @@ export default function About() {
             <div className="md:w-1/2">
               <h2 className="text-xl font-semibold">{artist.name}</h2>
               <p className="mt-1 text-sm text-neutral-500">{artist.role}</p>
-              <p className="mt-6 leading-relaxed text-neutral-800">
-                {artist.bio}
-              </p>
-              <ul className="mt-6 space-y-1.5 text-sm text-neutral-500">
-                {artist.career.map((line) => (
-                  <li key={line}>{line}</li>
+              {artist.bio && (
+                <p className="mt-6 leading-relaxed text-neutral-800">
+                  {artist.bio}
+                </p>
+              )}
+              <div className="mt-8 space-y-6">
+                {artist.career.map((group) => (
+                  <div key={group.group}>
+                    <h3 className="text-xs uppercase tracking-[0.2em] text-neutral-400">
+                      {group.group}
+                    </h3>
+                    <ul className="mt-3 space-y-2.5">
+                      {group.items.map((item) => (
+                        <li key={item.title}>
+                          <p className="text-sm leading-snug text-neutral-700">
+                            {item.title}
+                          </p>
+                          {item.meta && (
+                            <p className="mt-0.5 text-xs text-neutral-400">
+                              {item.meta}
+                            </p>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 ))}
-              </ul>
+              </div>
               <a
                 href={artist.instagram}
                 target="_blank"

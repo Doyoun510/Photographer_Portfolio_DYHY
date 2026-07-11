@@ -2,27 +2,71 @@
   {
     "id": "a1",
     "name": "김도윤",
-    "role": "Photographer — Portrait · Street",
-    "bio": "사람의 표정과 거리의 순간을 기록합니다. 자연광을 활용한 편안한 분위기의 인물 사진과 도시의 리듬을 담은 스트릿 사진을 주로 작업합니다.",
+    "role": "Photographer",
+    "bio": "색다른 관점으로 일상과 공간, 사람을 바라봅니다.",
     "career": [
-      "2024 개인전 〈빛의 기록〉",
-      "2023 그룹전 〈도시의 얼굴들〉 참여",
-      "브랜드 룩북 · 프로필 촬영 다수 진행"
+      {
+        "group": "공모 · 선정",
+        "items": [
+          {
+            "title": "후지필름 포토페스타 2025 — 1Day 100Story 전국촬영 우수 사진가 선정",
+            "meta": "2025.8.23–8.31 · 노들갤러리"
+          }
+        ]
+      },
+      {
+        "group": "전시",
+        "items": [
+          {
+            "title": "인화 21번째 전시 〈이 행성을 사랑하는 19가지 이유〉",
+            "meta": "2024.7.19–7.20 · 역삼1문화센터 전시실"
+          },
+          {
+            "title": "인화 22번째 전시 〈영화롭고 영화로운〉",
+            "meta": "2025.1.17–1.18 · 역삼1문화센터 전시실"
+          },
+          {
+            "title": "닿기를 〈TINY UNIVERSE〉 건강한 여성 사진전 — ‘닿기를’ × ‘인화’ 협업",
+            "meta": "2024.8.19–8.23 · 흑석역(9호선) 지하 2층 전시존"
+          },
+          {
+            "title": "〈최선을 다해 허물어지기〉 다중노출 단체전",
+            "meta": "2026.6.10–6.27 · 오목한 미술관"
+          }
+        ]
+      },
+      {
+        "group": "협업",
+        "items": [
+          { "title": "인터스타일 매거진 홈 레코드 촬영" },
+          { "title": "포토그라운드 스냅 사진 플랫폼 전 소속 작가" }
+        ]
+      }
     ],
-    "instagram": "https://instagram.com/dyhy.dy",
+    "instagram": "https://www.instagram.com/luster_film/",
     "profileCloudinaryId": "dyhy/profile/a1"
   },
   {
     "id": "a2",
     "name": "박하영",
-    "role": "Photographer — Interior · Space",
-    "bio": "공간이 가진 온도와 결을 담습니다. 카페, 스튜디오, 주거 공간 등 빛과 구조가 어우러지는 인테리어 사진을 중심으로 작업합니다.",
+    "role": "Photographer / Model",
+    "bio": "",
     "career": [
-      "2024 공간 사진집 〈머무는 자리〉 발간",
-      "2023 인테리어 매거진 화보 촬영",
-      "카페 · 쇼룸 공간 촬영 다수 진행"
+      {
+        "group": "전시",
+        "items": [
+          {
+            "title": "인화 22번째 전시 〈영화롭고 영화로운〉",
+            "meta": "2025.1.17–1.18 · 역삼1문화센터 전시실"
+          },
+          {
+            "title": "인화 23번째 전시 〈분실물 센터 : 시선을 되찾아 드립니다〉",
+            "meta": "2025.7.17–7.19 · 중랑아트센터 제1전시실"
+          }
+        ]
+      }
     ],
-    "instagram": "https://instagram.com/dyhy.hy",
+    "instagram": "https://www.instagram.com/ph0togra.phy/",
     "profileCloudinaryId": "dyhy/profile/a2"
   }
 ]
