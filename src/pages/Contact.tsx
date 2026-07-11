@@ -11,6 +11,12 @@ const handle = (url: string) => "@" + normalize(url).split("/").pop();
 
 // 대표(스튜디오) 계정과 개별 작가 계정 분리
 const mainInsta = site.instagram;
+const mainArtist = artists.find(
+  (a) => normalize(a.instagram) === normalize(mainInsta)
+);
+const mainLabel = mainArtist
+  ? `${mainArtist.name} · ${handle(mainInsta)} →`
+  : `${handle(mainInsta)} →`;
 const otherArtists = artists.filter(
   (a) => normalize(a.instagram) !== normalize(mainInsta)
 );
@@ -59,7 +65,7 @@ export default function Contact() {
 
       {/* 메인 소통 창구 — 스튜디오 대표 인스타 DM */}
       <p className="mt-12 text-xs uppercase tracking-[0.2em] text-neutral-400">
-        메인 작가 Instergram 문의
+        메인 작가 Instagram 문의
       </p>
       <a
         href={mainInsta}
@@ -67,7 +73,7 @@ export default function Contact() {
         rel="noreferrer"
         className={`${pill} mt-5 border-neutral-900 bg-neutral-900 px-8 text-base text-white hover:bg-neutral-700`}
       >
-        {handle(mainInsta)} 으로 DM 보내기 →
+        {mainLabel}
       </a>
 
       {/* 작가 개별 문의 */}
