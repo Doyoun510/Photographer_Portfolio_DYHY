@@ -11,12 +11,21 @@ const CHIPS: { value: Category | null; label: string }[] = [
 interface FilterChipsProps {
   value: Category | null;
   onChange: (value: Category | null) => void;
+  /** 사진이 존재하는 카테고리만 칩으로 노출한다. (All은 항상 표시) */
+  available: Category[];
 }
 
-export default function FilterChips({ value, onChange }: FilterChipsProps) {
+export default function FilterChips({ value, onChange, available }: FilterChipsProps) {
+  const chips = CHIPS.filter(
+    (chip) => chip.value === null || available.includes(chip.value)
+  );
+
+  // 카테고리가 하나뿐이면 필터 UI가 무의미하므로 숨긴다
+  if (available.length < 2) return null;
+
   return (
     <div className="flex flex-wrap gap-2" role="group" aria-label="카테고리 필터">
-      {CHIPS.map((chip) => {
+      {chips.map((chip) => {
         const selected = chip.value === value;
         return (
           <button
