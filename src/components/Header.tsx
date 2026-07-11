@@ -14,52 +14,54 @@ export default function Header() {
   const isHome = pathname === "/";
 
   return (
-    <header
-      className={
-        isHome
-          ? "absolute inset-x-0 top-0 z-40 text-white"
-          : "sticky top-0 z-40 border-b border-neutral-100 bg-white/90 text-neutral-800 backdrop-blur"
-      }
-    >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-        <Link to="/" aria-label="DYHY 홈" className="text-lg">
-          <Logo />
-        </Link>
+    <>
+      <header
+        className={
+          isHome
+            ? "absolute inset-x-0 top-0 z-40 text-white"
+            : "sticky top-0 z-40 border-b border-neutral-100 bg-white/90 text-neutral-800 backdrop-blur"
+        }
+      >
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+          <Link to="/" aria-label="DYHY 홈" className="text-lg">
+            <Logo />
+          </Link>
 
-        {/* 데스크톱 텍스트 네비 */}
-        <nav className="hidden items-center gap-8 text-sm md:flex">
-          {LINKS.map((link) => (
-            <NavLink
-              key={link.to}
-              to={link.to}
-              className={({ isActive }) =>
-                `tracking-wide transition-opacity hover:opacity-60 ${
-                  isActive ? "underline underline-offset-8" : ""
-                }`
-              }
-            >
-              {link.label}
-            </NavLink>
-          ))}
-        </nav>
+          {/* 데스크톱 텍스트 네비 */}
+          <nav className="hidden items-center gap-8 text-sm md:flex">
+            {LINKS.map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                className={({ isActive }) =>
+                  `tracking-wide transition-opacity hover:opacity-60 ${
+                    isActive ? "underline underline-offset-8" : ""
+                  }`
+                }
+              >
+                {link.label}
+              </NavLink>
+            ))}
+          </nav>
 
-        {/* 모바일 햄버거 */}
-        <button
-          type="button"
-          className="md:hidden"
-          onClick={() => setOpen(true)}
-          aria-label="메뉴 열기"
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-            <path d="M3 6h18M3 12h18M3 18h18" strokeLinecap="round" />
-          </svg>
-        </button>
-      </div>
+          {/* 모바일 햄버거 */}
+          <button
+            type="button"
+            className="md:hidden"
+            onClick={() => setOpen(true)}
+            aria-label="메뉴 열기"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <path d="M3 6h18M3 12h18M3 18h18" strokeLinecap="round" />
+            </svg>
+          </button>
+        </div>
+      </header>
 
-      {/* 모바일 풀스크린 오버레이 메뉴 */}
+      {/* 모바일 풀스크린 오버레이 메뉴 — 헤더 바깥에 두어 backdrop-blur의 위치 컨텍스트 영향을 받지 않게 한다 */}
       {open && (
         <div className="fixed inset-0 z-50 flex flex-col bg-white text-neutral-800">
-          <div className="flex items-center justify-between px-6 py-5">
+          <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-5">
             <span className="text-lg">
               <Logo />
             </span>
@@ -83,6 +85,6 @@ export default function Header() {
           </nav>
         </div>
       )}
-    </header>
+    </>
   );
 }

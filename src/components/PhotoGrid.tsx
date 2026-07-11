@@ -42,9 +42,9 @@ interface PhotoGridProps {
 
 export default function PhotoGrid({ photos, onPhotoClick }: PhotoGridProps) {
   return (
-    <div className="columns-2 gap-4 lg:columns-3">
+    <div className="columns-2 gap-2.5 sm:gap-4 lg:columns-3">
       {photos.map((photo, index) => (
-        <div key={photo.id} className="mb-4 break-inside-avoid">
+        <div key={photo.id} className="mb-2.5 break-inside-avoid sm:mb-4">
           <FadeIn>
             <button
               type="button"
