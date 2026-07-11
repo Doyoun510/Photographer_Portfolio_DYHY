@@ -42,7 +42,7 @@ export default function Contact() {
           onClick={copyKakao}
           className="rounded-full border border-neutral-200 px-6 py-3 text-sm tracking-wide text-neutral-500 transition-colors hover:border-neutral-400"
         >
-          {copied ? "아이디 복사됨 ✓" : `KakaoTalk ${site.kakaoId}`}
+          {copied ? "아이디 복사됨 ✓" : `KakaoTalk ID ${site.kakaoId}`}
         </button>
         <a
           href={`mailto:${site.email}`}
