@@ -28,9 +28,9 @@ export const fallbackFor = (id: string, w: number) => {
 export const thumb = (id: string) =>
   USE_PLACEHOLDER ? placeholder(id, 1200) : `${BASE}/f_auto,q_auto,w_1200/${id}`;
 
-// About 프로필 사진 전용 — 크게 보이는 자리라 1200px
+// About 프로필 사진 전용 — 크게 보이는 자리라 2000px
 export const profile = (id: string) =>
-  USE_PLACEHOLDER ? placeholder(id, 1200) : `${BASE}/f_auto,q_auto,w_1200/${id}`;
+  USE_PLACEHOLDER ? placeholder(id, 2000) : `${BASE}/f_auto,q_auto,w_2000/${id}`;
 
 export const full = (id: string) =>
   USE_PLACEHOLDER ? placeholder(id, 1600) : `${BASE}/f_auto,q_auto,w_2000/${id}`;
