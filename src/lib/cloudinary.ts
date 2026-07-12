@@ -27,6 +27,10 @@ export const fallbackFor = (id: string, w: number) => {
 export const thumb = (id: string) =>
   USE_PLACEHOLDER ? placeholder(id, 600) : `${BASE}/f_auto,q_auto,w_600/${id}`;
 
+// About 프로필 사진 전용 — 2장뿐이라 고해상도로 서빙 (레티나 대응)
+export const profile = (id: string) =>
+  USE_PLACEHOLDER ? placeholder(id, 1200) : `${BASE}/f_auto,q_auto,w_1200/${id}`;
+
 export const full = (id: string) =>
   USE_PLACEHOLDER ? placeholder(id, 1600) : `${BASE}/f_auto,q_auto,w_2000/${id}`;
 

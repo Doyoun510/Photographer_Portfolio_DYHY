@@ -1,4 +1,4 @@
-import { fallbackFor, thumb } from "../lib/cloudinary";
+import { fallbackFor, profile } from "../lib/cloudinary";
 import artistsData from "../data/artists.json";
 import type { Artist } from "../types";
 
@@ -19,12 +19,12 @@ export default function About() {
           >
             <div className="md:w-1/2">
               <img
-                src={thumb(artist.profileCloudinaryId)}
+                src={profile(artist.profileCloudinaryId)}
                 alt={`${artist.name} 프로필 사진`}
                 loading="lazy"
                 onError={(e) => {
                   e.currentTarget.onerror = null;
-                  e.currentTarget.src = fallbackFor(artist.profileCloudinaryId, 600);
+                  e.currentTarget.src = fallbackFor(artist.profileCloudinaryId, 1200);
                 }}
                 className="aspect-[3/4] w-full object-cover"
               />
