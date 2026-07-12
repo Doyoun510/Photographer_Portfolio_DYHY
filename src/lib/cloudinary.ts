@@ -24,15 +24,17 @@ export const fallbackFor = (id: string, w: number) => {
   return `data:image/svg+xml,${encodeURIComponent(svg)}`;
 };
 
+// 그리드 썸네일 — 사진작가 PR 페이지라 화질 우선. 레티나에서도 선명하도록 1200px
 export const thumb = (id: string) =>
-  USE_PLACEHOLDER ? placeholder(id, 600) : `${BASE}/f_auto,q_auto,w_600/${id}`;
+  USE_PLACEHOLDER ? placeholder(id, 1200) : `${BASE}/f_auto,q_auto,w_1200/${id}`;
 
-// About 프로필 사진 전용 — 2장뿐이라 고해상도로 서빙 (레티나 대응)
+// About 프로필 사진 전용 — 크게 보이는 자리라 1200px
 export const profile = (id: string) =>
   USE_PLACEHOLDER ? placeholder(id, 1200) : `${BASE}/f_auto,q_auto,w_1200/${id}`;
 
 export const full = (id: string) =>
   USE_PLACEHOLDER ? placeholder(id, 1600) : `${BASE}/f_auto,q_auto,w_2000/${id}`;
 
+// 메인 히어로 자동 슬라이드 — 풀스크린으로 크게 깔리는 사진이라 2000px
 export const hero = (id: string) =>
-  USE_PLACEHOLDER ? placeholder(id, 1600) : `${BASE}/f_auto,q_auto,w_1600/${id}`;
+  USE_PLACEHOLDER ? placeholder(id, 2000) : `${BASE}/f_auto,q_auto,w_2000/${id}`;
