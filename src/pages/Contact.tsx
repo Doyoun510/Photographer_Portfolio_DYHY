@@ -56,7 +56,7 @@ export default function Contact() {
 
       {/* 작가 인스타 문의 — 두 계정 가로 배치, 대표 계정만 검은색 강조 */}
       <p className="mt-12 text-xs uppercase tracking-[0.2em] text-neutral-400">
-        작가 인스타 문의
+        작가 인스타 DM 연락
       </p>
       <div className="mt-5 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
         {artists.map((artist) => {
