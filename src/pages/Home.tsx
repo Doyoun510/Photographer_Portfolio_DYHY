@@ -18,7 +18,11 @@ export default function Home() {
         <h2 className="mb-10 text-sm uppercase tracking-[0.3em] text-neutral-500">
           Selected Works
         </h2>
-        <PhotoGrid photos={featured} onPhotoClick={() => navigate("/works")} />
+        <PhotoGrid
+          photos={featured}
+          onPhotoClick={() => navigate("/works")}
+          layout="uniform"
+        />
         <div className="mt-12 text-center">
           <Link
             to="/works"
