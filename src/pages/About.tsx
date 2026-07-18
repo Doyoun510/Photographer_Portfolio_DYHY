@@ -44,18 +44,45 @@ export default function About() {
                       {group.group}
                     </h3>
                     <ul className="mt-3 space-y-2.5">
-                      {group.items.map((item) => (
-                        <li key={item.title}>
-                          <p className="text-sm leading-snug text-neutral-700">
-                            {item.title}
-                          </p>
-                          {item.meta && (
-                            <p className="mt-0.5 text-xs text-neutral-400">
-                              {item.meta}
+                      {group.items.map((item) =>
+                        item.url ? (
+                          // 링크가 있는 항목 — 밑줄로 클릭 가능함을 알리고, hover 시 진해진다
+                          <li key={item.title}>
+                            <a
+                              href={item.url}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="group block"
+                            >
+                              <p className="text-sm leading-snug text-neutral-700 underline decoration-neutral-300 underline-offset-4 transition-colors group-hover:text-neutral-950 group-hover:decoration-neutral-800">
+                                {item.title}
+                                <span
+                                  aria-hidden="true"
+                                  className="ml-1 inline-block transition-transform group-hover:translate-x-0.5"
+                                >
+                                  ↗
+                                </span>
+                              </p>
+                              {item.meta && (
+                                <p className="mt-0.5 text-xs text-neutral-400 transition-colors group-hover:text-neutral-500">
+                                  {item.meta}
+                                </p>
+                              )}
+                            </a>
+                          </li>
+                        ) : (
+                          <li key={item.title}>
+                            <p className="text-sm leading-snug text-neutral-700">
+                              {item.title}
                             </p>
-                          )}
-                        </li>
-                      ))}
+                            {item.meta && (
+                              <p className="mt-0.5 text-xs text-neutral-400">
+                                {item.meta}
+                              </p>
+                            )}
+                          </li>
+                        )
+                      )}
                     </ul>
                   </div>
                 ))}

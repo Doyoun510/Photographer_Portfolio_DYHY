@@ -15,6 +15,8 @@ export interface CareerItem {
   title: string;
   /** 날짜·장소 등 부가 정보 (선택) */
   meta?: string;
+  /** 관련 링크 (선택) — 있으면 해당 항목이 클릭 가능한 링크로 표시된다 */
+  url?: string;
 }
 
 export interface CareerGroup {
