@@ -26,7 +26,7 @@ export default function About() {
                   e.currentTarget.onerror = null;
                   e.currentTarget.src = fallbackFor(artist.profileCloudinaryId, 1200);
                 }}
-                className="aspect-[3/4] w-full object-cover"
+                className="aspect-[3/4] w-full bg-neutral-100 object-cover"
               />
             </div>
             <div className="md:w-1/2">

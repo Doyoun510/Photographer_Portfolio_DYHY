@@ -48,19 +48,27 @@ export default function PhotoGrid({ photos, onPhotoClick }: PhotoGridProps) {
           <FadeIn>
             <button
               type="button"
-              className="block w-full cursor-pointer overflow-hidden"
+              className="block w-full cursor-pointer overflow-hidden bg-neutral-100"
               onClick={() => onPhotoClick?.(index)}
               aria-label={photo.alt}
+              // 원본 비율로 자리를 미리 확보 → 로딩 중 사진이 밀리거나 순서가 바뀌지 않음
+              style={
+                photo.width && photo.height
+                  ? { aspectRatio: `${photo.width} / ${photo.height}` }
+                  : undefined
+              }
             >
               <img
                 src={thumb(photo.cloudinaryId)}
                 alt={photo.alt}
+                width={photo.width}
+                height={photo.height}
                 loading="lazy"
                 onError={(e) => {
                   e.currentTarget.onerror = null;
                   e.currentTarget.src = fallbackFor(photo.cloudinaryId, 600);
                 }}
-                className="w-full transition-transform duration-500 hover:scale-[1.02]"
+                className="h-full w-full object-cover transition-transform duration-500 hover:scale-[1.02]"
               />
             </button>
           </FadeIn>

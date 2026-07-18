@@ -6,6 +6,9 @@ export interface Photo {
   category: Category;
   alt: string;
   featured: boolean;
+  /** 원본 크기 — 로딩 전 자리를 미리 확보해 레이아웃 흔들림을 막는 용도 */
+  width?: number;
+  height?: number;
 }
 
 export interface CareerItem {

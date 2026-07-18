@@ -4,370 +4,476 @@
     "cloudinaryId": "DSCF0662_ebd4bi",
     "category": "interior",
     "alt": "햇살이 드는 미니멀 거실 인테리어 사진",
-    "featured": true
+    "featured": true,
+    "width": 1536,
+    "height": 2048
   },
   {
     "id": "p002",
     "cloudinaryId": "DSCF6102_i2dsip",
     "category": "interior",
     "alt": "우드 톤 주방 공간 인테리어 사진",
-    "featured": true
+    "featured": true,
+    "width": 2048,
+    "height": 1365
   },
   {
     "id": "p003",
     "cloudinaryId": "DSCF0512_s1lyzg",
     "category": "interior",
     "alt": "화이트 톤 침실 인테리어 사진",
-    "featured": true
+    "featured": true,
+    "width": 1536,
+    "height": 2048
   },
   {
     "id": "p004",
     "cloudinaryId": "DSC09880_aqkxof",
     "category": "interior",
     "alt": "숙소 라운지의 소파와 조명 인테리어 사진",
-    "featured": true
+    "featured": true,
+    "width": 1365,
+    "height": 2048
   },
   {
     "id": "p005",
     "cloudinaryId": "DSC00041_wklwku",
     "category": "interior",
     "alt": "자연광이 드는 작업실 인테리어 사진",
-    "featured": true
+    "featured": true,
+    "width": 1365,
+    "height": 2048
   },
   {
     "id": "p006",
     "cloudinaryId": "DSC09771-쿨_mmdu4u",
     "category": "interior",
     "alt": "창과 계단이 있는 복층 공간 인테리어 사진",
-    "featured": true
+    "featured": true,
+    "width": 2048,
+    "height": 1365
   },
   {
     "id": "p007",
     "cloudinaryId": "DSC09786_mpoihg",
     "category": "interior",
     "alt": "아늑한 조명의 거실 코너 인테리어 사진",
-    "featured": true
+    "featured": true,
+    "width": 1365,
+    "height": 2048
   },
   {
     "id": "p008",
     "cloudinaryId": "DSCF6171_shjzso",
     "category": "interior",
     "alt": "정돈된 다이닝 공간 인테리어 사진",
-    "featured": true
+    "featured": true,
+    "width": 2048,
+    "height": 1365
   },
   {
     "id": "p009",
     "cloudinaryId": "DSC09740_w0ntph",
     "category": "interior",
     "alt": "식물이 놓인 창가 인테리어 사진",
-    "featured": false
+    "featured": false,
+    "width": 1365,
+    "height": 2048
   },
   {
     "id": "p010",
     "cloudinaryId": "DSC00057_ppnvhz",
     "category": "interior",
     "alt": "미니멀한 욕실 공간 인테리어 사진",
-    "featured": false
+    "featured": false,
+    "width": 1365,
+    "height": 2048
   },
   {
     "id": "p011",
     "cloudinaryId": "DSCF6074_nhsi1i",
     "category": "interior",
     "alt": "빈티지 가구가 놓인 방 인테리어 사진",
-    "featured": false
+    "featured": false,
+    "width": 1365,
+    "height": 2048
   },
   {
     "id": "p012",
     "cloudinaryId": "DSCF6063_sucdia",
     "category": "interior",
     "alt": "넓은 통창이 있는 거실 인테리어 사진",
-    "featured": false
+    "featured": false,
+    "width": 1365,
+    "height": 2048
   },
   {
     "id": "p013",
     "cloudinaryId": "DSC09741-쿨_gqy1aj",
     "category": "interior",
     "alt": "정돈된 침구의 침실 인테리어 사진",
-    "featured": false
+    "featured": false,
+    "width": 2048,
+    "height": 1365
   },
   {
     "id": "p014",
     "cloudinaryId": "DSCF0492_unhogl",
     "category": "interior",
     "alt": "주방 아일랜드 디테일 인테리어 사진",
-    "featured": false
+    "featured": false,
+    "width": 2048,
+    "height": 1536
   },
   {
     "id": "p015",
     "cloudinaryId": "DSCF6153_ajouag",
     "category": "interior",
     "alt": "복도와 자연광 인테리어 사진",
-    "featured": false
+    "featured": false,
+    "width": 1365,
+    "height": 2048
   },
   {
     "id": "p016",
     "cloudinaryId": "DSCF0526_h3qobr",
     "category": "interior",
     "alt": "소품이 어우러진 선반 인테리어 사진",
-    "featured": false
+    "featured": false,
+    "width": 2048,
+    "height": 1536
   },
   {
     "id": "p017",
     "cloudinaryId": "DSC09971_iupgbd",
     "category": "interior",
     "alt": "따뜻한 톤의 서재 인테리어 사진",
-    "featured": false
+    "featured": false,
+    "width": 1365,
+    "height": 2048
   },
   {
     "id": "p018",
     "cloudinaryId": "DSC09912_uhyxzq",
     "category": "interior",
     "alt": "발코니와 외부 전경 인테리어 사진",
-    "featured": false
+    "featured": false,
+    "width": 2048,
+    "height": 1365
   },
   {
     "id": "p019",
     "cloudinaryId": "DSCF5988_v8qa4x",
     "category": "interior",
     "alt": "모던한 현관 공간 인테리어 사진",
-    "featured": false
+    "featured": false,
+    "width": 1365,
+    "height": 2048
   },
   {
     "id": "p020",
     "cloudinaryId": "DSCF0762_q8e5il",
     "category": "interior",
     "alt": "조명이 돋보이는 밤의 실내 인테리어 사진",
-    "featured": false
+    "featured": false,
+    "width": 2048,
+    "height": 1536
   },
   {
     "id": "p021",
     "cloudinaryId": "kim_1_srxbhr",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 4032,
+    "height": 6048
   },
   {
     "id": "p022",
     "cloudinaryId": "kim_2_yrocq0",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 4032,
+    "height": 6048
   },
   {
     "id": "p023",
     "cloudinaryId": "kim_3_ot6tuo",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 4032,
+    "height": 6048
   },
   {
     "id": "p024",
     "cloudinaryId": "kim_4_hky5dg",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 4032,
+    "height": 6048
   },
   {
     "id": "p025",
     "cloudinaryId": "khu_1_hizkxj",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 4032,
+    "height": 6048
   },
   {
     "id": "p026",
     "cloudinaryId": "khu_2_flmkui",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 4032,
+    "height": 6048
   },
   {
     "id": "p027",
     "cloudinaryId": "khu_3_ipse28",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 4032,
+    "height": 6048
   },
   {
     "id": "p028",
     "cloudinaryId": "khu_4_v5awlp",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 4032,
+    "height": 6048
   },
   {
     "id": "p029",
     "cloudinaryId": "khu_5_jrjguu",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 4032,
+    "height": 6048
   },
   {
     "id": "p030",
     "cloudinaryId": "khu_6_x4cuvg",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 4032,
+    "height": 6048
   },
   {
     "id": "p031",
     "cloudinaryId": "oh_1_u1ssnj",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 4032,
+    "height": 6048
   },
   {
     "id": "p032",
     "cloudinaryId": "oh_2_fnlmpb",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 4032,
+    "height": 6048
   },
   {
     "id": "p033",
     "cloudinaryId": "oh_3_qm7jmu",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 4032,
+    "height": 6048
   },
   {
     "id": "p034",
     "cloudinaryId": "oh_4_i8bfeh",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 4032,
+    "height": 6048
   },
   {
     "id": "p035",
     "cloudinaryId": "oh_5_lk8nlb",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 4032,
+    "height": 6048
   },
   {
     "id": "p036",
     "cloudinaryId": "shung_1_vxrs1d",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 8256,
+    "height": 6192
   },
   {
     "id": "p037",
     "cloudinaryId": "shung_2_ukhhqq",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 6192,
+    "height": 8256
   },
   {
     "id": "p038",
     "cloudinaryId": "shung_3_vzlgyi",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 6192,
+    "height": 8256
   },
   {
     "id": "p039",
     "cloudinaryId": "shung_4_l9pklu",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 4500,
+    "height": 6000
   },
   {
     "id": "p040",
     "cloudinaryId": "snu_1_v2jdhc",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 4032,
+    "height": 6048
   },
   {
     "id": "p041",
     "cloudinaryId": "snu_2_vyqmmr",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 4032,
+    "height": 6048
   },
   {
     "id": "p042",
     "cloudinaryId": "snu_3_gyveai",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 4032,
+    "height": 6048
   },
   {
     "id": "p043",
     "cloudinaryId": "snu_4_c1271z",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 4032,
+    "height": 6048
   },
   {
     "id": "p044",
     "cloudinaryId": "snu_5_pdth4s",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 4032,
+    "height": 6048
   },
   {
     "id": "p045",
     "cloudinaryId": "ho_1_fb6fg9",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 4032,
+    "height": 6048
   },
   {
     "id": "p046",
     "cloudinaryId": "ho_2_u44uww",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 4032,
+    "height": 6048
   },
   {
     "id": "p047",
     "cloudinaryId": "bea_1_lpwhls",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 8256,
+    "height": 6192
   },
   {
     "id": "p048",
     "cloudinaryId": "bea_2_h5tmhz",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 6192,
+    "height": 8256
   },
   {
     "id": "p049",
     "cloudinaryId": "bea_2_qcxvyn",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 6192,
+    "height": 8256
   },
   {
     "id": "p050",
     "cloudinaryId": "bea_3_mt9n5d",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 6192,
+    "height": 8256
   },
   {
     "id": "p051",
     "cloudinaryId": "bea_4_m7hfyb",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 8256,
+    "height": 6192
   },
   {
     "id": "p052",
     "cloudinaryId": "bea_5_jlle0p",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 6192,
+    "height": 8256
   },
   {
     "id": "p053",
     "cloudinaryId": "beach_ywlg1w",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false
+    "featured": false,
+    "width": 5969,
+    "height": 7958
   }
 ]
