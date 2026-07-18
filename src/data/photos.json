@@ -181,24 +181,6 @@
   },
   {
     "id": "p021",
-    "cloudinaryId": "kim_1_srxbhr",
-    "category": "portrait",
-    "alt": "인물 스냅 사진",
-    "featured": false,
-    "width": 4032,
-    "height": 6048
-  },
-  {
-    "id": "p022",
-    "cloudinaryId": "kim_2_yrocq0",
-    "category": "portrait",
-    "alt": "인물 스냅 사진",
-    "featured": false,
-    "width": 4032,
-    "height": 6048
-  },
-  {
-    "id": "p023",
     "cloudinaryId": "kim_3_ot6tuo",
     "category": "portrait",
     "alt": "인물 스냅 사진",
@@ -207,8 +189,26 @@
     "height": 6048
   },
   {
-    "id": "p024",
+    "id": "p022",
     "cloudinaryId": "kim_4_hky5dg",
+    "category": "portrait",
+    "alt": "인물 스냅 사진",
+    "featured": false,
+    "width": 4032,
+    "height": 6048
+  },
+  {
+    "id": "p023",
+    "cloudinaryId": "kim_1_srxbhr",
+    "category": "portrait",
+    "alt": "인물 스냅 사진",
+    "featured": false,
+    "width": 4032,
+    "height": 6048
+  },
+  {
+    "id": "p024",
+    "cloudinaryId": "kim_2_yrocq0",
     "category": "portrait",
     "alt": "인물 스냅 사진",
     "featured": false,

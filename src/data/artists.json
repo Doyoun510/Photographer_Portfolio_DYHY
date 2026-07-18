@@ -10,14 +10,18 @@
         "items": [
           {
             "title": "후지필름 포토페스타 2025  —  1 Day, 100 Story 전국촬영 우수 사진가 선정",
-            "meta": "2025.8.23–8.31 · 노들갤러리"
+            "meta": "2025.8.23–8.31 · 노들갤러리",
+            "url" : "https://www.fujifilm-korea.co.kr/playwith/id/209"
           }
         ]
       },
       {
         "group": "협업",
         "items": [
-          { "title": "인터스타일 매거진, 홈 레코드 촬영 작가" },
+          { 
+          "title": "인터스타일 매거진, 홈 레코드 촬영 작가",
+          "url" : "https://blog.naver.com/PostView.naver?blogId=culibus&logNo=223966958972&categoryNo=1&parentCategoryNo=0&viewDate=&currentPage=4&postListTopCurrentPage=&from=menu"
+        },
           { "title": "포토그라운드 스냅 사진 플랫폼 전 소속 작가" }
         ]
       },
@@ -52,6 +56,18 @@
     "role": "Photographer / Model",
     "bio": "",
     "career": [
+      {
+        "group": "협업",
+        "items": [
+          {
+            "title": "양평 펜션 그랑아치 촬영 협업 ",
+            "url": "https://www.instagram.com/p/DLv4aN9TMCf/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+          },
+
+          { "title": "한약학과 홍보 교류 동아리 한울림 : 7기 유튜브 팀, 촬영 담당" },
+          { "title": "서울시 시립 마포청소년센터 : 가족사진 촬영 재능기부" }
+        ]
+      },
       {
         "group": "전시",
         "items": [
