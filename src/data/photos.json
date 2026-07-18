@@ -13,7 +13,7 @@
     "cloudinaryId": "DSCF6102_i2dsip",
     "category": "interior",
     "alt": "우드 톤 주방 공간 인테리어 사진",
-    "featured": true,
+    "featured": false,
     "width": 2048,
     "height": 1365
   },
@@ -22,7 +22,7 @@
     "cloudinaryId": "DSCF0512_s1lyzg",
     "category": "interior",
     "alt": "화이트 톤 침실 인테리어 사진",
-    "featured": true,
+    "featured": false,
     "width": 1536,
     "height": 2048
   },
@@ -31,7 +31,7 @@
     "cloudinaryId": "DSC09880_aqkxof",
     "category": "interior",
     "alt": "숙소 라운지의 소파와 조명 인테리어 사진",
-    "featured": true,
+    "featured": false,
     "width": 1365,
     "height": 2048
   },
@@ -40,7 +40,7 @@
     "cloudinaryId": "DSC00041_wklwku",
     "category": "interior",
     "alt": "자연광이 드는 작업실 인테리어 사진",
-    "featured": true,
+    "featured": false,
     "width": 1365,
     "height": 2048
   },
@@ -49,7 +49,7 @@
     "cloudinaryId": "DSC09771-쿨_mmdu4u",
     "category": "interior",
     "alt": "창과 계단이 있는 복층 공간 인테리어 사진",
-    "featured": true,
+    "featured": false,
     "width": 2048,
     "height": 1365
   },
@@ -58,7 +58,7 @@
     "cloudinaryId": "DSC09786_mpoihg",
     "category": "interior",
     "alt": "아늑한 조명의 거실 코너 인테리어 사진",
-    "featured": true,
+    "featured": false,
     "width": 1365,
     "height": 2048
   },
@@ -67,7 +67,7 @@
     "cloudinaryId": "DSCF6171_shjzso",
     "category": "interior",
     "alt": "정돈된 다이닝 공간 인테리어 사진",
-    "featured": true,
+    "featured": false,
     "width": 2048,
     "height": 1365
   },
@@ -139,7 +139,7 @@
     "cloudinaryId": "DSCF0526_h3qobr",
     "category": "interior",
     "alt": "소품이 어우러진 선반 인테리어 사진",
-    "featured": false,
+    "featured": true,
     "width": 2048,
     "height": 1536
   },
@@ -166,7 +166,7 @@
     "cloudinaryId": "DSCF5988_v8qa4x",
     "category": "interior",
     "alt": "모던한 현관 공간 인테리어 사진",
-    "featured": false,
+    "featured": true,
     "width": 1365,
     "height": 2048
   },
@@ -202,7 +202,7 @@
     "cloudinaryId": "hy_3_ughlhz",
     "category": "interior",
     "alt": "따뜻한 톤의 실내 공간 사진",
-    "featured": false,
+    "featured": true,
     "width": 5754,
     "height": 3836
   },
@@ -220,7 +220,7 @@
     "cloudinaryId": "kim_3_ot6tuo",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false,
+    "featured": true,
     "width": 4032,
     "height": 6048
   },
@@ -238,7 +238,7 @@
     "cloudinaryId": "kim_1_srxbhr",
     "category": "portrait",
     "alt": "인물 스냅 사진",
-    "featured": false,
+    "featured": true,
     "width": 4032,
     "height": 6048
   },
@@ -504,20 +504,11 @@
     "height": 8256
   },
   {
-    "id": "p057",
-    "cloudinaryId": "beach_ywlg1w",
-    "category": "portrait",
-    "alt": "인물 스냅 사진",
-    "featured": false,
-    "width": 5969,
-    "height": 7958
-  },
-  {
     "id": "p058",
     "cloudinaryId": "dy_1_lmmea1",
     "category": "street",
     "alt": "스트릿 사진",
-    "featured": false,
+    "featured": true,
     "width": 8256,
     "height": 6192
   },
@@ -526,7 +517,7 @@
     "cloudinaryId": "dy_3_fgy9rs",
     "category": "street",
     "alt": "스트릿 사진",
-    "featured": false,
+    "featured": true,
     "width": 5730,
     "height": 3820
   },
@@ -653,7 +644,7 @@
     "cloudinaryId": "hys_4_veewvi",
     "category": "street",
     "alt": "스트릿 사진",
-    "featured": false,
+    "featured": true,
     "width": 4724,
     "height": 7087
   }
