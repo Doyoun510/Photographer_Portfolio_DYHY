@@ -1,4 +1,10 @@
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import {
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+  type ReactNode,
+} from "react";
 import { fallbackFor, thumb } from "../lib/cloudinary";
 import type { Photo } from "../types";
 
@@ -31,6 +37,101 @@ function FadeIn({ children }: { children: ReactNode }) {
       }`}
     >
       {children}
+    </div>
+  );
+}
+
+/**
+ * Justified 배치 — 한 줄의 높이를 통일하고 폭을 사진 비율대로 나눠
+ * 줄이 컨테이너 폭을 정확히 채우게 한다. 크롭 없이 위아래 여백이 균일해진다.
+ */
+function JustifiedRows({
+  photos,
+  renderTile,
+}: {
+  photos: Photo[];
+  renderTile: (photo: Photo, index: number) => ReactNode;
+}) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [width, setWidth] = useState(0);
+
+  // 첫 페인트 전에 폭을 재서 깜빡임을 막는다.
+  // ResizeObserver만으로는 놓치는 환경이 있어 window resize도 함께 듣는다.
+  useLayoutEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const update = () => setWidth(el.clientWidth);
+    update();
+    const ro = new ResizeObserver(update);
+    ro.observe(el);
+    window.addEventListener("resize", update);
+    window.addEventListener("orientationchange", update);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", update);
+      window.removeEventListener("orientationchange", update);
+    };
+  }, []);
+
+  const gap = width < 640 ? 10 : 16;
+  const targetHeight = width < 640 ? 200 : 320;
+
+  const ratioOf = (p: Photo) =>
+    p.width && p.height ? p.width / p.height : 1;
+
+  // 1) 목표 높이 기준으로 줄 수를 먼저 정하고
+  // 2) 각 줄의 비율 합이 고르도록 분배한다.
+  //    → 마지막 줄에 한 장만 남는 일 없이 모든 줄이 폭을 꽉 채운다.
+  const built: { photo: Photo; index: number; w: number }[][] = [];
+  if (width > 0 && photos.length > 0) {
+    const ratios = photos.map(ratioOf);
+    const total = ratios.reduce((a, b) => a + b, 0);
+    const rowCount = Math.min(
+      photos.length,
+      Math.max(1, Math.round(total / (width / targetHeight)))
+    );
+    const ideal = total / rowCount;
+
+    const groups: number[][] = [];
+    let cur: number[] = [];
+    let sum = 0;
+    ratios.forEach((ratio, i) => {
+      // 이 사진을 넣으면 이상적인 합에서 더 멀어지면 줄을 끊는다
+      const worseIfAdded = Math.abs(sum + ratio - ideal) > Math.abs(sum - ideal);
+      if (cur.length && worseIfAdded && groups.length < rowCount - 1) {
+        groups.push(cur);
+        cur = [];
+        sum = 0;
+      }
+      cur.push(i);
+      sum += ratio;
+    });
+    if (cur.length) groups.push(cur);
+
+    groups.forEach((idxs) => {
+      const rowRatio = idxs.reduce((a, i) => a + ratios[i], 0);
+      const h = (width - gap * (idxs.length - 1)) / rowRatio;
+      built.push(
+        idxs.map((i) => ({ photo: photos[i], index: i, w: ratios[i] * h }))
+      );
+    });
+  }
+
+  return (
+    <div ref={containerRef}>
+      {built.map((row, ri) => (
+        <div
+          key={ri}
+          className="flex"
+          style={{ gap, marginBottom: ri < built.length - 1 ? gap : 0 }}
+        >
+          {row.map((item) => (
+            <div key={item.photo.id} style={{ width: item.w }}>
+              {renderTile(item.photo, item.index)}
+            </div>
+          ))}
+        </div>
+      ))}
     </div>
   );
 }
@@ -83,15 +184,9 @@ export default function PhotoGrid({
     </FadeIn>
   );
 
-  // CSS 그리드는 왼→오른쪽 순서로 채워지므로 1,2,3 배치가 된다.
-  // items-start를 줘야 각 사진이 늘어나지 않고 원본 비율 높이를 유지한다.
   if (rows) {
     return (
-      <div className="grid grid-cols-2 items-start gap-2.5 sm:gap-4 lg:grid-cols-3">
-        {photos.map((photo, index) => (
-          <div key={photo.id}>{tile(photo, index)}</div>
-        ))}
-      </div>
+      <JustifiedRows photos={photos} renderTile={tile} />
     );
   }
 
