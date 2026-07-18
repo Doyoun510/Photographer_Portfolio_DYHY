@@ -21,7 +21,7 @@ export default function Hero({ photos }: { photos: Photo[] }) {
       {slides.map((photo, i) => (
         <img
           key={photo.id}
-          src={hero(photo.cloudinaryId)}
+          src={hero(photo.cloudinaryId, photo.rotate)}
           alt={photo.alt}
           loading={i === 0 ? "eager" : "lazy"}
           onError={(e) => {

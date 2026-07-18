@@ -16,7 +16,7 @@ export default function Lightbox({ photos, index, onClose }: LightboxProps) {
       index={Math.max(index, 0)}
       close={onClose}
       slides={photos.map((photo) => ({
-        src: full(photo.cloudinaryId),
+        src: full(photo.cloudinaryId, photo.rotate),
         alt: photo.alt,
       }))}
     />

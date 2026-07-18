@@ -24,17 +24,31 @@ export const fallbackFor = (id: string, w: number) => {
   return `data:image/svg+xml,${encodeURIComponent(svg)}`;
 };
 
+/**
+ * 회전 변환 — 리사이즈보다 먼저 적용해야 회전 후 기준으로 폭이 잡힌다.
+ * 음수 = 반시계(왼쪽), 양수 = 시계 방향. 예) -90 = 왼쪽으로 90도
+ */
+const rot = (rotate?: number) => (rotate ? `a_${rotate}/` : "");
+
 // 그리드 썸네일 — 사진작가 PR 페이지라 화질 우선. 레티나에서도 선명하도록 1200px
-export const thumb = (id: string) =>
-  USE_PLACEHOLDER ? placeholder(id, 1200) : `${BASE}/f_auto,q_auto,w_1200/${id}`;
+export const thumb = (id: string, rotate?: number) =>
+  USE_PLACEHOLDER
+    ? placeholder(id, 1200)
+    : `${BASE}/${rot(rotate)}f_auto,q_auto,w_1200/${id}`;
 
 // About 프로필 사진 전용 — 크게 보이는 자리라 2000px
-export const profile = (id: string) =>
-  USE_PLACEHOLDER ? placeholder(id, 2000) : `${BASE}/f_auto,q_auto,w_2000/${id}`;
+export const profile = (id: string, rotate?: number) =>
+  USE_PLACEHOLDER
+    ? placeholder(id, 2000)
+    : `${BASE}/${rot(rotate)}f_auto,q_auto,w_2000/${id}`;
 
-export const full = (id: string) =>
-  USE_PLACEHOLDER ? placeholder(id, 1600) : `${BASE}/f_auto,q_auto,w_2000/${id}`;
+export const full = (id: string, rotate?: number) =>
+  USE_PLACEHOLDER
+    ? placeholder(id, 1600)
+    : `${BASE}/${rot(rotate)}f_auto,q_auto,w_2000/${id}`;
 
 // 메인 히어로 자동 슬라이드 — 풀스크린으로 크게 깔리는 사진이라 2000px
-export const hero = (id: string) =>
-  USE_PLACEHOLDER ? placeholder(id, 2000) : `${BASE}/f_auto,q_auto,w_2000/${id}`;
+export const hero = (id: string, rotate?: number) =>
+  USE_PLACEHOLDER
+    ? placeholder(id, 2000)
+    : `${BASE}/${rot(rotate)}f_auto,q_auto,w_2000/${id}`;

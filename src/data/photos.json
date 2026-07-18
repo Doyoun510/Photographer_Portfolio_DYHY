@@ -545,8 +545,9 @@
     "category": "street",
     "alt": "스트릿 사진",
     "featured": false,
-    "width": 6048,
-    "height": 4032
+    "width": 4032,
+    "height": 6048,
+    "rotate": -90
   },
   {
     "id": "p062",

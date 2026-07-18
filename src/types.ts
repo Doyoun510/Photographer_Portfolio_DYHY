@@ -6,9 +6,12 @@ export interface Photo {
   category: Category;
   alt: string;
   featured: boolean;
-  /** 원본 크기 — 로딩 전 자리를 미리 확보해 레이아웃 흔들림을 막는 용도 */
+  /** 원본 크기 — 로딩 전 자리를 미리 확보해 레이아웃 흔들림을 막는 용도.
+   *  rotate가 있으면 회전 후 기준 크기를 넣는다. */
   width?: number;
   height?: number;
+  /** 회전 각도 (선택) — 음수는 왼쪽(반시계). 예) -90 */
+  rotate?: number;
 }
 
 export interface CareerItem {

@@ -59,7 +59,7 @@ export default function PhotoGrid({ photos, onPhotoClick }: PhotoGridProps) {
               }
             >
               <img
-                src={thumb(photo.cloudinaryId)}
+                src={thumb(photo.cloudinaryId, photo.rotate)}
                 alt={photo.alt}
                 width={photo.width}
                 height={photo.height}
