@@ -21,7 +21,7 @@ export default function Home() {
         <PhotoGrid
           photos={featured}
           onPhotoClick={() => navigate("/works")}
-          layout="uniform"
+          layout="rows"
         />
         <div className="mt-12 text-center">
           <Link

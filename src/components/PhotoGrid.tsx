@@ -39,10 +39,11 @@ interface PhotoGridProps {
   photos: Photo[];
   onPhotoClick?: (index: number) => void;
   /**
-   * masonry: 원본 비율 유지, 세로(열 단위)로 흐름 — Works 아카이브용
-   * uniform: 정사각 타일을 가로(왼→오른쪽) 순서로 배치 — 홈 큐레이션용
+   * masonry: 세로(열 단위)로 흐름 — Works 아카이브용
+   * rows: 가로(왼→오른쪽) 순서로 흐름 — 홈 큐레이션용
+   * 두 방식 모두 사진은 원본 비율을 유지한다 (크롭 없음)
    */
-  layout?: "masonry" | "uniform";
+  layout?: "masonry" | "rows";
 }
 
 export default function PhotoGrid({
@@ -50,20 +51,18 @@ export default function PhotoGrid({
   onPhotoClick,
   layout = "masonry",
 }: PhotoGridProps) {
-  const uniform = layout === "uniform";
+  const rows = layout === "rows";
 
   const tile = (photo: Photo, index: number) => (
     <FadeIn>
       <button
         type="button"
-        className={`block w-full cursor-pointer overflow-hidden bg-neutral-100 ${
-          uniform ? "aspect-square" : ""
-        }`}
+        className="block w-full cursor-pointer overflow-hidden bg-neutral-100"
         onClick={() => onPhotoClick?.(index)}
         aria-label={photo.alt}
-        // masonry는 원본 비율로 자리를 미리 확보 → 로딩 중 사진이 밀리지 않음
+        // 원본 비율로 자리를 미리 확보 → 크롭 없이, 로딩 중 사진이 밀리지도 않음
         style={
-          !uniform && photo.width && photo.height
+          photo.width && photo.height
             ? { aspectRatio: `${photo.width} / ${photo.height}` }
             : undefined
         }
@@ -84,10 +83,11 @@ export default function PhotoGrid({
     </FadeIn>
   );
 
-  // CSS 그리드는 왼→오른쪽 순서로 채워지므로 1,2,3 배치가 된다
-  if (uniform) {
+  // CSS 그리드는 왼→오른쪽 순서로 채워지므로 1,2,3 배치가 된다.
+  // items-start를 줘야 각 사진이 늘어나지 않고 원본 비율 높이를 유지한다.
+  if (rows) {
     return (
-      <div className="grid grid-cols-2 gap-2.5 sm:gap-4 lg:grid-cols-3">
+      <div className="grid grid-cols-2 items-start gap-2.5 sm:gap-4 lg:grid-cols-3">
         {photos.map((photo, index) => (
           <div key={photo.id}>{tile(photo, index)}</div>
         ))}
